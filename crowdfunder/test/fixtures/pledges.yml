@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 1
+  reward: MyText
+  delivery: 2016-05-03 16:23:47
+
+two:
+  amount: 1
+  reward: MyText
+  delivery: 2016-05-03 16:23:47

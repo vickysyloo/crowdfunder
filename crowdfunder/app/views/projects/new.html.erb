@@ -1,2 +1,16 @@
-<h1>Projects#new</h1>
-<p>Find me in app/views/projects/new.html.erb</p>
+<h1>Create New Project</h1>
+
+<%= render 'form' %>
+
+<%= form_for (@project.pledges) do |f| %>
+
+  <p>Pledges</p>
+    <%= f.fields_for :pledges do |r| %>
+      <%= render 'pledges_fields', :f => r %>
+    <% end %>
+    <%= link_to_add_association 'add pledge', f, :pledges %>
+    <%= f.submit %>
+    
+<% end %>
+
+<%= link_to 'Home', root_path %>

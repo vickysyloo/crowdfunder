@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  skip_before_action :require_login, only: [:index, :new, :create]
 
   def new
     @user = User.new
@@ -13,6 +14,7 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:alert] = "Successfully signed up!"
+      auto_login(user)
       redirect_to root_path
     else
       render :new

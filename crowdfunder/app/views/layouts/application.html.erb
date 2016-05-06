@@ -8,6 +8,9 @@
 </head>
 <body>
   <div id="nav">
+    <div id="home">
+      <%= link_to "Home", root_path %>
+    </div>
       <% if current_user %>
         <p>Welcome <%= current_user.name %>!</p>
         <%= link_to "Edit Profile", edit_user_path(current_user.id) %>

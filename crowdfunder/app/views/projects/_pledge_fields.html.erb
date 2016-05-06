@@ -1,3 +1,5 @@
+<div class="nested-fields">
+
 <div>
   <%= f.label :amount %>
   <%= f.text_field :amount %>
@@ -9,8 +11,10 @@
 </div>
 
 <div>
-  <%= f.label :location %>
-  <%= f.text_field :location %>
+  <%= f.label :delivery %>
+  <%= f.date_select :delivery %>
 </div>
 
-<%= link_to_remove_association "remove pledge", f %>
+  <%= link_to_remove_association "cancel", f %>
+
+</div>

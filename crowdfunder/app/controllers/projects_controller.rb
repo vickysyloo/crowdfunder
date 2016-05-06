@@ -18,7 +18,7 @@ class ProjectsController < ApplicationController
 
     if @project.save
       flash[:alert] = "Project created!"
-      redirect_to project_path
+      redirect_to project_path(@project)
     else
       render :new
     end
@@ -55,7 +55,7 @@ class ProjectsController < ApplicationController
 private
 
   def project_params
-    params.require(:project).permit(:name, :description, :location, :deadline, :goal, :image)
+    params.require(:project).permit(:name, :description, :location, :deadline, :goal, :image, pledges_attributes: [:amount, :reward, :delivery, :id, :_destroy])
   end
 
 

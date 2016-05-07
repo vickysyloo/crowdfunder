@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:alert] = "Successfully signed up!"
-      auto_login(user)
+      auto_login(@user)
       redirect_to root_path
     else
       render :new

@@ -11,6 +11,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.name = params[:user][:name].capitalize
 
     if @user.save
       UserMailer.welcome(@user).deliver_later

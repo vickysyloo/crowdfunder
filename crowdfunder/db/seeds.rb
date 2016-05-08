@@ -25,7 +25,7 @@ purse = Project.create!(
   location: 'Toronto, ON',
   deadline: DateTime.now + 1.month,
   goal: 10000,
-  image: 'http://vignette4.wikia.nocookie.net/clubpenguin/images/3/3c/Pink_Purse.png/revision/latest?cb=20130102040213',
+  image: 'https://s-media-cache-ak0.pinimg.com/236x/35/b0/ed/35b0ed91dbb833241807e6093ab694c3.jpg',
   user_id: cheyenne.id
 )
 
